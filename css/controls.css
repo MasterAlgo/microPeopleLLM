@@ -1,0 +1,94 @@
+/* Trainer Controls: Grid, fields, status, button */
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.field input {
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: var(--font-main);
+}
+
+.field input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.status-field {
+  grid-column: span 3;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.status-bar {
+  height: 36px;
+  padding: 0 12px;
+  background-color: #f0f0f0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, #f8f8f8, #efefef);
+}
+
+.status-bar::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-bar.status-training {
+  color: #007a3d;
+}
+
+.status-bar.status-training::before {
+  background-color: var(--color-success);
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.6);
+}
+
+.status-bar.status-stopped {
+  color: #663d00;
+}
+
+.status-bar.status-stopped::before {
+  background-color: var(--color-warning);
+}

@@ -1,0 +1,25 @@
+/* Console Output Panel */
+
+.console-output {
+  background-color: #f0f0f0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  min-height: 60px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-top: 10px;
+}
+
+.console-output p {
+  margin: 4px 0;
+}
+
+.console-output .error { color: #c00; }
+.console-output .warn { color: #cc7a00; }
+.console-output .info { color: #007acc; }
+.console-output .log { color: #444; }
