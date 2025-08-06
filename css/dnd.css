@@ -1,0 +1,46 @@
+/* Drag & Drop Zones */
+
+.dnd-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.dnd-zone {
+  flex: 1;
+  min-height: 120px;
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+  color: var(--color-text-light);
+  background-color: #f8fafd;
+  transition: all 0.3s;
+}
+
+.dnd-zone:hover {
+  border-color: var(--color-primary-hover);
+  background-color: #edf5ff;
+}
+
+.dnd-zone.active {
+  border-style: solid;
+  background-color: #e3f2fd;
+  border-color: var(--color-primary);
+}
+
+.dnd-zone[data-type="unlearning"] {
+  border-color: var(--color-danger);
+}
+
+.dnd-zone[data-type="unlearning"].active {
+  border-color: #c2185b;
+  background-color: #fce4ec;
+}
+
+.dnd-zone h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}

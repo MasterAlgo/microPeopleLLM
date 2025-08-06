@@ -1,0 +1,21 @@
+/* Panel-Specific Styles */
+
+.panel.trainer {
+  border-top: 4px solid var(--color-primary);
+}
+
+.panel.console {
+  border-top: 4px solid #673ab7;
+}
+
+.panel.telemetry {
+  border-top: 4px solid var(--color-danger);
+}
+
+.panel.generator {
+  border-top: 4px solid var(--color-success);
+}
+
+.panel.next-move {
+  border-top: 4px solid #9b59b6;
+}

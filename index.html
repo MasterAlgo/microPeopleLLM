@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trainer UI</title>
+
+    <!-- Theme & Base -->
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Layout -->
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/panels.css" />
+
+    <!-- Component-Specific Styles -->
+    <link rel="stylesheet" href="css/controls.css" />
+    <link rel="stylesheet" href="css/dnd.css" />
+    <link rel="stylesheet" href="css/console.css" />
+    <link rel="stylesheet" href="css/telemetry.css" />
+    <link rel="stylesheet" href="css/telemetry-panel.css">    
+    <link rel="stylesheet" href="css/generator.css">    
+</head>
+
+<body>
+
+  <!-- Main Wide Container: All Panels -->
+  <div class="container-wide">
+
+    <!-- 1. Trainer Panel -->
+    <div class="panel trainer" id="trainer-panel">
+      <h2>🎯 Trainer</h2>
+      <div id="dnd-container"></div>
+      <div id="controls-container"></div>
+    </div>
+
+    <!-- 2. Console Panel -->
+    <div class="panel console" id="console-panel">
+      <h2>📜 Console</h2>
+      <div id="console-output" class="console-output">
+        <p><small>Console initialized...</small></p>
+      </div>
+    </div>
+
+    <!-- 3. Telemetry Panel -->
+    <div class="panel telemetry" id="telemetry-panel">
+      <h2>📊 Telemetry</h2>
+      <div id="telemetry-content"></div>
+    </div>
+
+    <!-- 4. Generator Panel -->
+    <div class="panel generator" id="generator-panel">
+      <h2>⚡ Generator</h2>
+      <div id="generator-content">
+        <p><small>Input prompts, generation controls, and output will appear here.</small></p>
+      </div>
+    </div>
+
+    <!-- 5. What's Next Panel -->
+    <div class="panel next-move" id="next-move-panel">
+      <h2>🔮 What's Next</h2>
+      <div id="next-move-content">
+        <p><small>Suggestions, predictions, and recommended actions will appear here.</small></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Load JS Modules -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
