@@ -1,25 +1,9 @@
-An n‑gram can be seen as a LIF neuron in disguise — but only as a special case of the LIF model.
+https://www.linkedin.com/posts/activity-7358925454180831233-bxvK - a post and a clip (how-to)
 
-An n‑gram’s tokens can be thought of as dendritic synapses. N‑grams must exist in layers, with sparse connections between those layers. For example, two nodes "ab" and "cd" connected to a higher‑level node would define its “label” as "abcd".
+We propose viewing an n‑gram as a special‑case leaky integrate‑and‑fire (LIF) neuron. In this analogy, n‑gram tokens correspond to dendritic synapses, arranged in hierarchical layers with sparse inter‑layer connectivity. For example, nodes "ab" and "cd" may combine to form the higher‑level label "abcd". Both LIF neurons and n‑grams process N inputs and produce M outputs to downstream nodes.
 
-Both LIF neurons and n‑grams operate with N inputs (dendritic synapses) and M outputs (axonal synapses to downstream nodes).
+A standard n‑gram fires only when all inputs are active simultaneously, analogous to a LIF neuron with maximum threshold — effectively a logical AND gate, rare in biology. Lowering the threshold yields a fuzzy n‑gram that responds to multiple patterns; progressively increasing thresholds layer‑by‑layer enhances selectivity. Fuzzy responses, shaped by edge and node redundancy, reduce memory requirements while retaining high inference precision.
 
-In principle, an n‑gram should be able to integrate asynchronous input signals and fire when certain conditions are met. But an ordinary n‑gram — even in a hierarchy — fires only when all its inputs are activated simultaneously. That’s equivalent to a LIF neuron with its threshold set at the maximum, effectively turning it into a logical AND device — which almost never happens in biological systems.
+Each node exhibits duality: the transmission protocol (e.g., spiking) is analog‑like, whereas the conveyed meaning is fuzzy and symbolic. This is akin to “a few Mystery Santas — from among those I know — delivering presents of varying value.” Such symbolic‑analog fusion may form a viable basis for scalable architectures.
 
-This is the n‑gram’s specialty: it responds only to the specific input pattern it represents. If you lower an n‑gram’s “threshold,” it starts responding to multiple patterns — becoming a fuzzy n‑gram. Gradually increasing the threshold layer by layer raises selectivity. These fuzzy responses, shaped by redundancy in edges and nodes, can save a lot of memory — and still infer with high precision.
-
-The big idea is that every node has a kind of duality: its protocol (spiking, or whatever) is analog‑like, but its “meaning” — the contextual payload it conveys — is fuzzy and symbolic.
-It’s like saying: “A few Mystery Santas — from among those I know — just delivered presents of varying value.”
-
-Is such a fuzzy foundation enough to build something solid upon?
-
-Anyway — here’s a clip from my experiments with building a “Little Big” LLM based on an n‑gram hierarchy. For demo purposes, it generates some text after training. It can also recognize, memorize associatively, and cluster.
-It runs in a single browser tab within 1 GB of allocated RAM.
-
-It learns sequentially and forgets gracefully, adding small pieces of “knowledge” to a larger body stored on an external hard drive. Imagine a “people’s LLM,” trained and uploaded across multiple devices (like SETI@home), then loaded back from a large (distributed?) repository as a subset of specific “experts” — chosen based on the required context, Matrix‑Dojo style.
-
-It can handle tabular data, symbolic data, and numerical data — all without gradients — by optimizing structure and weights.
-
-No code dependencies, all data remains local if desired (upcoming "Save", "Load" and "Merge Knowledge" buttons).
-
-Still, a lot of open questions remain.
+We demonstrate a prototype “Little Big” LLM built on an n‑gram hierarchy, capable of text generation, associative recall, and clustering. Implemented in a single browser tab within 1 GB RAM, it learns sequentially, forgets gracefully, and stores accumulated knowledge externally. The system supports distributed training (SETI@home‑style) and expert‑subset loading based on contextual needs. It operates on symbolic, numerical, and tabular data without gradient descent, relying solely on structural and weight optimization.
